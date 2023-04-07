@@ -1,0 +1,15 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    name: hls-eureka
+
+eureka:
+  instance:
+    hostname: hls-eureka
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka
+    register-with-eureka: false
+    fetch-registry: false

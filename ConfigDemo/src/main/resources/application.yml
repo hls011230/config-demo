@@ -1,0 +1,17 @@
+server:
+  port: 8769
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: config
+          username: 3026683545@qq.com
+          password: hls1195549750
+          default-label: master
+          uri: https://github.com/hls011230/config-demo.git
+  profiles:
+    active: native

@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    UserConsumer:
+      path: /consumer/**
+
+
+spring:
+  application:
+    name: zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+
+
+
+
+

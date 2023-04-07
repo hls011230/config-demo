@@ -1,0 +1,36 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka/
+
+
+spring:
+  application:
+    name: UserConsumer
+
+
+server:
+  port: 9100
+
+logging:
+  level:
+    com.hls.Feign.UserFeignClient: DEBUG
+
+feign:
+  circuitbreaker:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # 开启 info,health；新版本中只默认开启了 health
+        include: info,health
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 2000
